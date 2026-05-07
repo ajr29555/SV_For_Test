@@ -9,10 +9,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-app.get("/health", (req, res) => {
-  res.json({ ok: true });
-});
-
 const client = new MongoClient(process.env.MONGO_URI);
 let connected = false;
 
